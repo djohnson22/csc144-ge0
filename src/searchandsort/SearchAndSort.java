@@ -1,4 +1,4 @@
-
+//Still working on getting this all uploaded
 package searchandsort;
 
 
@@ -9,10 +9,11 @@ import java.util.Random;
 public class SearchAndSort {
     private static final Random rng = new Random();
     private static final int SIZE_THRESHOLD = 20;
+    
     /**
-     * 
-     * @param size
-     * @return 
+     * This method creates a list of random values for later use.
+     * @param size the size (legnth) of the list to be created
+     * @return the newly created list
      */
     
     public static List<Integer> makeList(int size) {
@@ -23,8 +24,9 @@ public class SearchAndSort {
         }//for
         return result;
     }//makeList
+    
     /**
-     * 
+     * This method is used to print the lists used in the searches and sorts.
      * @param values 
      */
     public static void printList( List<Integer> values ){
@@ -97,8 +99,8 @@ public class SearchAndSort {
     
     /**
      * This method uses a selection sort to sort a list of integers from low to high.
-     * 
-     * @param values 
+     * It requires an input list, and writes over that input list.
+     * @param values the list to be sorted
      */
     public static void selectionSort(List<Integer> values) {
         for (int step = 0; step < values.size() - 1; step++) {
@@ -113,12 +115,11 @@ public class SearchAndSort {
         values.set(min_idx, temp);
         }//for
     }//selectionSort
-    
-    // TO-DO: Define a method that sorts a list
-    // of integers using the insertion sort algorithm.
+
     /**
-     * 
-     * @param values 
+     * This method uses an insertion sort to sort a list of integers from low to high.
+     * It requires only an input list, and writes over that input list  
+     * @param values The list to be sorted
      */
     public static void insertionSort(List<Integer> values) {
         for (int step = 1; step < values.size(); step++) {
@@ -133,11 +134,12 @@ public class SearchAndSort {
   }//insertionSort
 
     /**
+     * This method is used to merge the partial lists created during a merge sort.
      * 
-     * @param values
-     * @param prefixStart
-     * @param suffixStart
-     * @param suffixEnd 
+     * @param values the list the partial lists originate from
+     * @param prefixStart the beginning of the first half-list
+     * @param suffixStart the beginning of the second half-list
+     * @param suffixEnd the end of the second half-list
      */
     public static void merge(List<Integer> values, int prefixStart,
             int suffixStart, int suffixEnd) {
@@ -175,8 +177,8 @@ public class SearchAndSort {
     } // merge( List<Integer>, int, int )
     
     /**
-     * 
-     * @param values 
+     * This method sorts a list of integers with a merge sort.
+     * @param values the list to be sorted
      */
     public static void mergeSort(List<Integer> values) {
         for (int stepSize = 2; stepSize < values.size(); stepSize *= 2) {
@@ -197,6 +199,7 @@ public class SearchAndSort {
     } // mergeSort( List<Integer> )
     
     /**
+     * This method generates lists and utilizes all the searches and sorts within the class.
      * 
      * @param a 
      */
