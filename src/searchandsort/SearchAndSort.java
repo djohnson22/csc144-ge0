@@ -1,4 +1,3 @@
-//Still working on getting this all uploaded
 package searchandsort;
 
 
@@ -107,7 +106,9 @@ public class SearchAndSort {
     
     /**
      * This method uses a selection sort to sort a list of integers from low to high.
-     * It requires an input list, and writes over that input list.
+     * It requires an input list, and writes over that input list. A selection 
+     * sort functions by first searching for the minimum value in a list, followed by
+     * the next smallest value, and so on.
      * @param values the list to be sorted
      */
     public static void selectionSort(List<Integer> values) {
@@ -126,7 +127,9 @@ public class SearchAndSort {
 
     /**
      * This method uses an insertion sort to sort a list of integers from low to high.
-     * It requires only an input list, and writes over that input list  
+     * It requires only an input list, and writes over that input list. An insertion 
+     * sort functions by comparing the first and second values of a list, followed by
+     * the second and third, continuing as such until the list is fully sorted.
      * @param values the list to be sorted
      */
     public static void insertionSort(List<Integer> values) {
@@ -143,7 +146,7 @@ public class SearchAndSort {
 
     /**
      * This method is used to merge the partial lists created during a merge sort.
-     * 
+     * (from leontabak)
      * @param values the list the partial lists originate from
      * @param prefixStart the beginning of the first half-list
      * @param suffixStart the beginning of the second half-list
@@ -186,6 +189,9 @@ public class SearchAndSort {
     
     /**
      * This method sorts a list of integers with a merge sort.
+     * It requires a single input list, and writes over it. A merge sort
+     * works by creating several smaller lists and sorting them individually.
+     * (from leontabak)
      * @param values the list to be sorted
      */
     public static void mergeSort(List<Integer> values) {
