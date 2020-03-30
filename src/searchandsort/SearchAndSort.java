@@ -6,6 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * This class contains methods for a variety of searches and sorts.
+ * Can create lists of random values, and complete sorts and searches. 
+ * Sorts include: Selection sort, Insertion sort, and Merge sort
+ * Searches include: Sequential search, Binary search
+ * @author djohnson22
+ */
+
 public class SearchAndSort {
     private static final Random rng = new Random();
     private static final int SIZE_THRESHOLD = 20;
@@ -27,7 +35,7 @@ public class SearchAndSort {
     
     /**
      * This method is used to print the lists used in the searches and sorts.
-     * @param values 
+     * @param values the list to be printed
      */
     public static void printList( List<Integer> values ){
         if (values.size() < SIZE_THRESHOLD) {
@@ -119,7 +127,7 @@ public class SearchAndSort {
     /**
      * This method uses an insertion sort to sort a list of integers from low to high.
      * It requires only an input list, and writes over that input list  
-     * @param values The list to be sorted
+     * @param values the list to be sorted
      */
     public static void insertionSort(List<Integer> values) {
         for (int step = 1; step < values.size(); step++) {
